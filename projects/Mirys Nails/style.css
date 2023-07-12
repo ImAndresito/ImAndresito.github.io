@@ -1,0 +1,345 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img,
+video {
+    max-width: 100%;
+    display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    word-wrap: break-word;
+}
+
+body {
+    overflow: auto;
+}
+
+header {
+    background-color: #B68ABD;
+    background-image: url(assets/img/bg.png);
+    background-position-x: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+/* MENU HAMBURGER */
+
+#menu-openBtn {
+    position: fixed;
+    right: 2.5rem;
+    z-index: 3;
+    border-radius: 10px;
+    background-color: #fff;
+    font-size: 2.5rem;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+}
+
+#menu-closeBtn {
+    position: fixed;
+    right: 3.3rem;
+    z-index: 2;
+    font-size: 2.8rem;
+    display: flex;
+    color: #fff;
+    display: none;
+    text-decoration: none;
+}
+
+
+/* NAV BAR */
+
+.navSize {
+    width: 100%;
+    padding: 1.5rem 0 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-container {
+    width: 50%;
+}
+
+.nav {
+    position: fixed;
+    z-index: -1;
+    top: -100%;
+    background-color: #000000b3;
+    width: 100%;
+    height: 100%;
+    padding-top: 4rem;
+    display: flex;
+    justify-content: center;
+    transition: .7s;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    text-align: center;
+    padding: 5rem 0;
+}
+
+ul li {
+    list-style: none;
+}
+
+ul a {
+    text-decoration: none;
+    color: #fff;
+    text-shadow: 0 0 10px #000;
+    font-size: 1.4rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+}
+
+ul a:hover,
+a:focus {
+    color: #84559A;
+}
+
+/* MAIN */
+
+.intro {
+    text-align: center;
+}
+
+.title {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.70);
+}
+
+.title h1 {
+    font-family: 'Times New Roman', Times, serif;
+    color: #84559A;
+    font-weight: 300;
+    padding: 1.2rem 0 .6rem;
+    font-size: 2rem;
+    letter-spacing: 1.5px;
+    text-shadow: 0 0 8px #B68ABD;
+}
+
+.title img {
+    padding-bottom: .8rem;
+    margin: auto;
+}
+
+.intro h2 {
+    font-size: 1.1rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    color: #fff;
+    padding: 1rem 0 1.3rem;
+    text-shadow: 0 0 5px #000;
+}
+
+.imgSlider {
+    position: relative;
+    height: 220px;
+    background-color: #000;
+}
+
+.imgSlide {
+    display: none;
+}
+
+.imgSlide img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: .7;
+}
+
+.imgSlider h3 {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%);
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 300;
+    font-size: 1.7rem;
+    text-shadow: 0 0 8px #000;
+}
+
+.imgSlide button {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    margin-bottom: 20px;
+    padding: .5rem .8rem;
+    border-radius: 5px;
+    border: 1px solid #AB4A4A;
+    color: #AB4A4A;
+    background-color: #e1e1e1dc;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+}
+
+.prenota-btn {
+    text-align: center;
+    padding: 1.6rem 0 2.5rem;
+    color: #000;
+}
+
+.prenota-btn button {
+    background-color: #FFF2AF;
+    padding: .9rem 2.3rem;
+    border-radius: .8rem;
+    border: 2px solid #fff;
+    font-size: 1.1rem;
+    box-shadow: 0 0 15px 2px #000;
+    text-decoration: none;
+    color: #000;
+}
+
+.btns-container {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3rem;
+}
+
+.btn-trattamenti {
+    background-color: #84559A;
+    border: none;
+    padding: 1rem 1.1rem;
+    border-radius: .5rem;
+    color: #fff;
+    margin-right: 1rem;
+    font-size: 1rem;
+}
+
+.btnPrezzi {
+    background-color: transparent;
+    border: none;
+    margin-left: 1rem;
+    color: #fff;
+    font-size: 1.1rem;
+    text-shadow: 0 0 5px #000;
+}
+
+.arrowD {
+    margin: auto;
+    padding-bottom: 1.6rem;
+    animation: bounce 2s ease infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-13px);
+    }
+
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+.trattamenti {
+    text-align: center;
+    padding-top: .8rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.trattamenti div {
+    width: 80%;
+    margin: auto;
+}
+
+.trattamenti h3 {
+    font-weight: 600;
+    font-size: 1.25rem;
+    padding: 1.5rem 0;
+    color: #B68ABD;
+}
+
+.trattamenti img {
+    width: 80%;
+    margin: auto;
+}
+
+.trattamenti p {
+    padding: 1rem 0;
+}
+
+
+footer {
+    width: 90%;
+    margin: auto;
+    padding: 2.5rem 0;
+}
+
+footer h3 {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    color: #84559A;
+    letter-spacing: 2px;
+}
+
+.orari-container {
+    display: flex;
+    align-items: center;
+    padding: .5rem 0;
+}
+
+footer p {
+    padding-left: .5rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+}
+
+.orarih3 {
+    padding-top: 2rem;
+}
+
+.fBtn-container{
+    text-align: center;
+    padding: 1.5rem 0 1rem 0;
+
+}
+
+.fBtn-container button{
+    background-color: #84559A;
+    border: none;
+    padding: .7rem 1.1rem;
+    border-radius: .4rem;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.fSocial-container {
+    display: flex;
+    justify-content: center;
+}
+
+.fSocial-container img {
+    width: 28px;
+    margin: .4rem;
+}

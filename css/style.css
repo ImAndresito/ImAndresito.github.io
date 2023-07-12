@@ -1,0 +1,634 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img,
+video {
+    max-width: 100%;
+    display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    word-wrap: break-word;
+}
+
+button {
+    font-family: inherit;
+}
+
+object {
+    pointer-events: none;
+}
+
+body {
+    background-color: #F4EFEC;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    padding-bottom: 2rem;
+}
+
+.title {
+    font-size: 4.5vw;
+}
+
+.title,
+.navBar {
+    padding-left: 1rem;
+}
+
+.logo {
+    display: flex;
+    position: relative;
+    color: #F44336;
+}
+
+.logo h1 {
+    font-size: 3.5rem;
+}
+
+.logoTxt {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.logoTxt p {
+    font-weight: 700;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.logoTxt p+p {
+    position: absolute;
+    font-weight: 300;
+    font-size: 1rem;
+    top: 80%;
+    transform: translate(0, -80%);
+}
+
+nav ul {
+    display: none;
+}
+
+.darkMode,
+.lightMode {
+    width: 9%;
+    position: absolute;
+    top: 1.2rem;
+    left: 90%;
+    transform: translate(-90%);
+    cursor: pointer;
+}
+
+#darkMode {
+    filter: drop-shadow(2px 2px 2px rgb(0 0 0 / 0.4));
+}
+
+#lightMode {
+    filter: drop-shadow(2px 2px 2px rgba(228, 228, 228, 0.4));
+    display: none;
+}
+
+
+main {
+    padding-top: 1.5rem;
+}
+
+.title {
+    text-align: left;
+    overflow: hidden;
+}
+
+.title .txt {
+    position: relative;
+}
+
+.txt2 {
+    background: -webkit-linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 1) 0%, rgba(244, 67, 54, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.txt2:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #F4EFEC;
+    border-left: 2px solid #F44336;
+    animation: animate 4s steps(12) infinite;
+}
+
+@keyframes animate {
+
+    40%,
+    60% {
+        left: calc(100% + 4px);
+    }
+
+    100% {
+        left: 0%;
+    }
+}
+
+.mainIcons {
+    display: flex;
+    width: fit-content;
+    margin: auto auto;
+    justify-content: center;
+    align-items: baseline;
+    padding-top: 1.5rem;
+}
+
+.mainIcons object {
+    padding: 0 .5rem;
+    width: 2.4rem;
+}
+
+.hImg {
+    width: 60%;
+    margin: auto;
+    margin-top: 1rem;
+}
+
+.hBtn {
+    margin: auto auto;
+    width: fit-content;
+    padding: 2.2rem 0 2rem;
+    display: flex;
+}
+
+.cvContainer img {
+    display: inline-block;
+    width: 17px;
+    margin-left: .3rem;
+}
+
+.hBtn a {
+    text-decoration: none;
+}
+
+.hBtn button {
+    color: #fff;
+    background-color: #F44336;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: .9rem;
+    display: flex;
+    cursor: pointer;
+}
+
+.contactBtn {
+    text-decoration: none;
+}
+
+.contactBtn button {
+    margin: 0 1rem;
+    color: #000;
+    background-color: #c4cae1;
+}
+
+.projects {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.projects h3 {
+    font-size: 1.5rem;
+}
+
+.projects p {
+    text-align: left;
+    font-size: .75rem;
+    color: #ff1100;
+    width: 90%;
+    margin: auto;
+    padding-top: .5rem;
+}
+
+.projects span {
+    font-size: .6rem;
+    font-style: italic;
+}
+
+.projectsContainer {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    padding-top: 1rem;
+}
+
+.projectsContainer div {
+    position: relative;
+    padding: 0 1rem;
+}
+
+.projectsContainer .pTitle {
+    font-size: 1rem;
+    color: #000;
+    text-align: center;
+    font-weight: 500;
+}
+
+.projectsContainer a {
+    text-decoration: none;
+}
+
+.skills {
+    text-align: center;
+    padding-top: 1.5rem;
+}
+
+.skills h3 {
+    font-size: 1.5rem;
+}
+
+.skills h4 {
+    color: #000000;
+    padding-top: 1rem;
+}
+
+.skillsCodingContainer {
+    display: flex;
+    padding-bottom: 1.5rem;
+    justify-content: space-around;
+}
+
+.skillsCodingContainer div {
+    width: 75%;
+    padding: 1rem .6rem 0;
+}
+
+.skillsCodingContainer div p {
+    font-size: .8rem;
+    padding-top: .4rem;
+}
+
+#sqlWImg {
+    display: none;
+}
+
+.designerContainer div {
+    width: 75%;
+    padding: 1rem .6rem 0;
+}
+
+.designerContainer {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.designerContainer div p {
+    font-size: .8rem;
+    padding-top: .4rem;
+}
+
+h6 {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+}
+
+
+
+/* -----------------------  GALAXY FOLD 280px -----------------------  */
+
+@media (max-width: 280px) {
+
+    .darkMode,
+    .lightMode {
+        top: 1.7rem;
+    }
+
+    #photoshop {
+        display: none;
+    }
+
+    #ps::after {
+        content: "Ps";
+    }
+
+    #illustrator {
+        display: none;
+    }
+
+    #ai::after {
+        content: "Ai";
+    }
+
+    #premiere {
+        display: none;
+    }
+
+    #pr::after {
+        content: "Pr";
+    }
+}
+
+
+
+/* ----------------------- ICONS 400px -----------------------  */
+
+@media (min-width: 400px) {
+
+    .darkMode,
+    .lightMode {
+        width: 6%;
+        top: 1.5rem;
+    }
+
+    .mainIcons object {
+        padding: 0 .5rem;
+        width: 2.7rem;
+    }
+
+    .skillsCodingContainer div {
+        width: 15%;
+    }
+
+    .designerContainer div {
+        width: 15%;
+    }
+}
+
+/* ----------------------- SMALL DEVICES 576px -----------------------  */
+
+@media (min-width: 576px) {
+
+    .darkMode,
+    .lightMode {
+        width: 5%;
+        top: 1.7rem;
+        left: 92%;
+        transform: translate(-92%);
+    }
+
+    .logo h1 {
+        font-size: 4rem;
+    }
+
+    .mainIcons object {
+        padding: 0 .5rem;
+        margin: 0 .3rem;
+        width: 3rem;
+    }
+
+    .hImg {
+        width: 65%;
+    }
+
+    .hBtn button {
+        font-size: 1.1rem;
+    }
+
+    .projects h3 {
+        font-size: 1.85rem;
+    }
+
+    .logo h1 {
+        font-size: 3.5rem;
+    }
+
+    .logoTxt {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .logoTxt p {
+        font-weight: 700;
+        font-size: 1.2rem;
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+
+    .logoTxt p+p {
+        position: absolute;
+        font-weight: 300;
+        font-size: 1rem;
+        top: 80%;
+        transform: translate(0, -80%);
+    }
+
+
+
+    .projects p {
+        font-size: 1rem;
+    }
+
+    .projects span {
+        font-size: .9rem;
+    }
+
+    .skills h3 {
+        font-size: 1.85rem;
+    }
+
+    .skillsCodingContainer div p {
+        font-size: 1rem;
+    }
+
+
+    .skillsCodingContainer div {
+        width: 13%;
+    }
+
+    .designerContainer div {
+        width: 13%;
+    }
+}
+
+/* ----------------------- TABLET DEVICES 768px -----------------------  */
+
+@media (min-width: 768px) {
+
+    .darkMode,
+    .lightMode {
+        padding-top: .6rem;
+        width: 4%;
+    }
+
+    .mainIcons object {
+        padding: 0 .5rem;
+        margin: 0 .3rem;
+        width: 3rem;
+    }
+}
+
+/* ----------------------- SMALL DESKTOPS DEVICES 992px -----------------------  */
+
+
+@media (min-width: 992px) {
+
+    .darkMode,
+    .lightMode {
+        width: 3.5%;
+        left: 95%;
+        transform: translate(-95%);
+        padding-top: 0;
+    }
+
+    main {
+        display: flex;
+        margin-bottom: 4.5rem;
+        position: relative;
+    }
+
+
+    .title {
+        font-size: 3vw;
+    }
+
+    .mainImgContainer {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        left: 95%;
+        transform: translate(-95%);
+        justify-content: space-around;
+        width: max-content;
+        height: 100%;
+    }
+
+    .mainIcons {
+        margin: 0 auto;
+    }
+
+    .hBtn {
+        margin: 0 auto;
+    }
+
+
+    .hImg {
+        display: none;
+    }
+
+
+    .projectsContainer {
+        margin-top: 2rem;
+        justify-content: center;
+    }
+
+    .projects h3 {
+        font-size: 2.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .projects p {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .projects span {
+        font-size: 1rem;
+    }
+
+    .skills h3 {
+        font-size: 2.5rem;
+    }
+
+    .skills h4 {
+        font-size: 1.1rem;
+    }
+
+    .skillsCodingContainer div p {
+        font-size: 1.1rem;
+    }
+
+    .designerContainer div p {
+        font-size: 1.1rem;
+    }
+
+    .skillsCodingContainer div {
+        width: 10%;
+    }
+
+    .designerContainer div {
+        width: 10%;
+    }
+}
+
+/* ----------------------- DESKTOPS DEVICES 1200px -----------------------  */
+
+@media (min-width: 1200px) {
+
+    .darkMode,
+    .lightMode {
+        padding-top: .4rem;
+        width: 3%;
+    }
+
+    .logo h1 {
+        font-size: 5rem;
+    }
+
+    .logoTxt {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .logoTxt p {
+        font-weight: 700;
+        font-size: 1.8rem;
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+
+    .logoTxt p+p {
+        position: absolute;
+        font-weight: 300;
+        font-size: 1.5rem;
+        top: 80%;
+        transform: translate(0, -80%);
+    }
+
+    .skillsCodingContainer div {
+        width: 8%;
+    }
+
+    .designerContainer div {
+        width: 8%;
+    }
+}
+
+/* ----------------------- LARGE DESKTOPS DEVICES 1400px -----------------------  */
+
+@media (min-width: 1400px) {
+
+    .darkMode,
+    .lightMode {
+        padding-top: .1rem;
+        width: 2.5%;
+    }
+
+
+    .mainImgContainer {
+        left: 90%;
+        transform: translate(-90%);
+    }
+
+    .skillsCodingContainer div {
+        width: 7%;
+    }
+
+    .designerContainer div {
+        width: 7%;
+    }
+}

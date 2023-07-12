@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #F4EFEC;
+    font-family: "Roboto" ,Arial, Helvetica, sans-serif
+}
+
+img,
+video {
+    max-width: 100%;
+    display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    word-wrap: break-word;
+}
+
+header {
+   padding-bottom: 1.5rem;
+}
+
+/* .navContainer{
+    height: 4rem;
+    background-color: #000;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    border-radius: 0 0 1.5rem 1.5rem;
+} */
+
+
+.hImgContainer{
+    position: relative;
+}
+
+#logo{
+    position: absolute;
+    display: flex;
+    left: 50%;
+    top: 95%;
+    transform: translate(-50%, -95%);
+    width: 30%;
+}
+
+.sBtnContainer{
+    position: relative;
+    top: 2rem;
+    right: 2rem;
+}
+
+input[type="text"]{
+    height: 2.6rem;
+    border-radius: 1.5rem;
+    border: none;
+    padding: 1rem;
+    position: absolute;
+    right: 0;
+    transition:width .6s cubic-bezier(0.29, 0.01, 0.43, 0.99);
+    cursor: pointer;
+    z-index: 3;
+    width: 0;
+    font-size: 1rem;
+}
+
+input[type="text"]:focus {
+    width: 80%;
+    z-index: 1;
+    cursor: text;
+}
+
+/* input[type="submit"]{
+    height: 2.3em;
+    width: 1rem;
+    padding: 1.3rem 1rem;
+    border: none;
+    border-radius: 1rem;
+    background-size:.8rem;
+    background-color: #fff;
+    cursor: pointer;
+} */
+
+#searchSubmit{
+    display: none;
+}
+
+input#search{
+    background-image: url(assets/icons/search.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 11;
+}
+
+input#search:focus {
+    background-image: none;
+}
+
+
+main h1{
+    padding-left: 1.2rem;
+    font-weight: 900;
+    font-size: 1.7rem;
+}
+
+.navBar{
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    width: 90%;
+    padding-top: 2rem;
+}
+
+.navBar a{
+    padding: 0 .5rem;
+}
+
+.topSales h1{
+    padding-left: 1.2rem;
+    font-weight: 900;
+    font-size: 1.7rem;
+    padding-top: 3rem;
+}
+
+.topSales img{
+    padding-top: 2rem;
+    margin: auto;
+    width: 80%;
+}
+
+.riciclo h1{
+    padding-left: 1.2rem;
+    font-weight: 900;
+    font-size: 1.7rem;
+    padding-top: 3rem;
+}
+
+.riciclo img{
+    padding-top: 2rem;
+    margin: auto;
+    width: 90%;
+}
+
+.riciclo p{
+    padding-top: 1.7rem;
+    width: 90%;
+    margin: auto;
+    font-weight: 400;
+    line-height: 1.5rem;
+}
+
+.prodotti h1{
+    padding-left: 1.2rem;
+    font-weight: 900;
+    font-size: 1.7rem;
+    padding-top: 3rem;
+}
+
+.prodotti img{
+    padding-top: 2rem;
+    margin: auto;
+    width: 90%;
+    padding-bottom: 7rem;
+}
+
+.footer{
+    position: fixed;
+    bottom: 1rem;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    background-color: #fff;
+    width: 83%;
+    padding: 1.5rem 1rem;
+    justify-content: space-around;
+    border-radius: 3rem;
+}
