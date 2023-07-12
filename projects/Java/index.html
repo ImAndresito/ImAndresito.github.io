@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Learning - ITA</title>
+    <style>
+        /* * {
+            margin: 0;
+            padding: 0;
+        } */
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: #1C1A26;
+            color: #fff;
+            width: 90%;
+            margin: auto;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-weight: 500;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        span {
+            color: #ff0000;
+        }
+
+        li {
+            line-height: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header style="text-align: center;">
+        <h1 style="margin-bottom: 0;">Corso Personale di Java preso da <blockquote style="margin-bottom: 0;"
+                cite="https://github.com/maboglia/CorsoJava/blob/master/appunti/000_programma_Java.md">
+                <cite>
+                    <a target="_blank"
+                        href="https://github.com/maboglia/CorsoJava/blob/master/appunti/000_programma_Java.md">Mauro
+                        Bogliaccino</a>
+                </cite>
+            </blockquote>
+        </h1>
+        <br>
+        <h2>
+            Corso OPP Java <br> (Object-Oriented Programming)
+        </h2>
+    </header>
+
+    <h3>
+        Obiettivi del Corso:
+    </h3>
+    <ul>
+        <li>Accedere e creare campi e metodi statici</li>
+        <li>Scrivere codice Java che utilizza <i>variabili, array, costruttori condizionali e loop</i></li>
+        <li>Incapsulare una classe usando modificatori di accesso e overload dei costruttori</li>
+        <li>Manipolare i dati numerici, testo e di stringa utilizzando gli operatori Java appropriati</li>
+        <li>Impostare le varibiali di ambiente per consentire al compilatore Java e gli eseguibili di runtine di
+            funzionare correttamente</li>
+        <li>Creare semplici classi Java e utilizzare riferimenti a oggetti per accedere a campi e metodi di classe</li>
+    </ul>
+    <br>
+    <hr>
+    <article id="java">
+        <section id="caratteristichePrincipali">
+            <h2>
+                Caratteristiche principali di Java
+            </h2>
+            <ul>
+                <li>
+                    Java è un linguaggio orientato agli oggetti, creato da un team guidato da James Gosling a partire
+                    dal
+                    1991 e
+                    rilasciato dalla Sun Microsystems nel 1995.
+                </li>
+                <p>Il motivo principale era quello di creare un linguaggio semplice e familiare</p>
+                <p>Le sue caratteristiche sono:</p>
+                <li>Linguaggio orientato agli oggetti (ereditarietà, polimosfismo, ...)</li>
+                <li>Gestione della memoria effettuata automaticamente dal sistema che si occuperà dell'allocazione e
+                    della
+                    successiva deallocazione della memoria</li>
+                <li>La capacità di poter eseguire in programma in piattaforme diverse senza dover essere modificata e
+                    ricompilata <i>(portabilità)</i></li>
+            </ul>
+        </section>
+        <br>
+        <hr>
+        <section id="caratteristiche">
+            <br>
+            <h3>
+                ➥ Caratteristiche di Java
+            </h3>
+            <p>I 5 obiettivi primari nella creazione del linguaggio</p>
+            <ol>
+                <li>Orientato agli oggetti, semplice e familiare</li>
+                <li>Sicuro</li>
+                <li>Indipendente dalla piattaforma (gira in tutti i dispositivi che hanno la JDK -> Dava
+                    Developement Kit)</li>
+                <li>Ad alte prestazioni</li>
+                <li>Interpretato, multi-thread, distribuito e dinamico</li>
+            </ol>
+            <br>
+            <hr>
+            <h3>
+                ➥ Orientato agli oggetti
+            </h3>
+            <ul>
+                <li>Orientato agli oggetti dalla base</li>
+                <li>In Java tutto è un oggetto</li>
+                <li><u><i>Incorpora</i></u> le caratteristiche:</li>
+                <ul>
+                    <li>Incapsulamento</li>
+                    <li>Polimosfirmo</li>
+                    <li>Ereditarietà</li>
+                </ul>
+                <li>Collegamento dinamico</li>
+                <li><u><i>Non</i></u> sono disponibili:</li>
+                <ul>
+                    <li>Ereditarietà multipla</li>
+                    <li>Overload degli operatori</li>
+                </ul>
+            </ul>
+            <br>
+            <hr>
+            <h3>
+                ➥ Semplice e familiare
+            </h3>
+            <ul>
+                <li>Basato su C (il linguaggio principale disponibile ad inizio anni 90')</li>
+                <li>Sviluppato da zero</li>
+                <li>Estramamente semplice: <span>(?)</span></li>
+                <ul>
+                    <li>senza puntatori, macro, registri</li>
+                </ul>
+                <li>Apprendimento rapido <span>(?)</span></li>
+                <li>Creato con lo scopo di semplificare la programmazione<span>(?)</span></li>
+                <li>Riduzione del numero di errori <span>(?)</span></li>
+            </ul>
+            <br>
+            <hr>
+            <h3>
+                ➥ Indipendente dalla piattaforma
+            </h3>
+            <ul>
+                <li>Più efficiente di altri linguaggi interpretati</li>
+                <li>Soluzione:</li>
+                <ul>
+                    <li>Macchina Virtuale -> JVM</li>
+                </ul>
+                <li>Linguaggio macchina bytecode <span>!</span></li>
+            </ul>
+            <br>
+            <hr>
+            <h3>
+                ➥ Interpretato
+            </h3>
+            <ul>
+                <li>Il bytecode deve essere Interpretato</li>
+                <img src="assets/img/interpretazioneBytecode.jpeg" alt="Interpretazione bytecode">
+                <li>Vantaggi rispetto ad altri linguaggi interpretati:</li>
+                <ul>
+                    <li>Codice più compatto</li>
+                    <li>Efficiente</li>
+                    <li>Codice confidenzaiale <i>(non esposto)</i></li>
+                </ul>
+            </ul>
+            <br>
+            <hr>
+            <h3>
+                ➥ Multi-thread
+            </h3>
+            <ul>
+                <li>Soluzione semplice ed elegante per la multiprogrammazione <span>(?)</span></li>
+                <li>Un programma può lanciare differenti processi</li>
+                <ul>
+                    <li><i>Non si tratta di nuovi processi, condivisono il codice e le variabili con il processo
+                            principale</i></li>
+                </ul>
+                <li>Simultaneamente si possono svolgere vari compiti</li>
+            </ul>
+            <br>
+            <hr>
+            <h3>
+                ➥ Distribuito e Dinamico
+            </h3>
+            <ul>
+                <li>Disegnato per un'esecuzione remota e distribuita <span>!</span></li>
+                <li>Sistema dinamico <span>!</span></li>
+                <li>Classe collegata quando è richiesta</li>
+                <li>Può essere caricata via rete</li>
+                <li>Dinamicamente estensibile <span>!</span></li>
+                <li>Disegnato per adattarsi ad ambienti in evoluzione</li>
+            </ul>
+        </section>
+    </article>
+
+</body>
+
+</html>
