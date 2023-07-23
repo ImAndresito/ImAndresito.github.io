@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goal2023 - Tickets</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+
+
+    <!-- LINK GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- LINK BOOTSTRAP CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <!-- DIV CON SFONDO NERO TRASPARENTE -->
+    <div class="black-overlay"></div>
+
+    <!-- CREZIONE NAV-BAR -->
+    <nav class="navBar">
+        <div class="logo">
+            <h1><span style="color: var(--green)">Go</span><span style="color: var(--orange)">al</span><span
+                    style="color: var(--deep-blue)">20</span><span style="color: var(--red)">23</span></h1>
+            <p>Tickets</p>
+        </div>
+        <div class="navItems">
+            <img src="/assets/icons/car.svg" alt="#">
+            <img src="/assets/icons/user.svg" alt="#">
+        </div>
+        <div class="menu"><img src="/assets/icons/dots.svg" alt="#">
+            <p>Menu</p>
+        </div>
+    </nav>
+    <!-- FINE NAV-BAR -->
+
+    <!-- CAROUSEL DI IMMAGINI USANDO BOOTSTRAP -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+                aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5"
+                aria-label="Slide 6"></button>
+        </div>
+
+
+
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <h5>APPUNTI PER UN FILM SULLA LOTTA IN CLASSE</h5>
+                <img src="/assets/img/appunti per un film sulla lotta di classe.jpg" class="d-block w-100" alt="...">
+                <button class="btn-prenota">PRENOTA ORA</button>
+            </div>
+
+            <div class="carousel-item">
+                <h5>IL BIRRAIO DI PRESTON</h5>
+                <img src="/assets/img/il birraio di preston.jpg" class="d-block w-100" alt="...">
+                <button class="btn-prenota">PRENOTA ORA</button>
+            </div>
+
+            <div class="carousel-item">
+                <h5>LA TRIVIATA</h5>
+                <img src="/assets/img/la traviata.jpg" class=" d-block w-100" alt="...">
+                <button class="btn-prenota">PRENOTA ORA</button>
+            </div>
+
+            <div class="carousel-item">
+                <h5>LA BOHEME</h5>
+                <img src="/assets/img/la boheme.jpg" class="d-block w-100" alt="...">
+                <button class="btn-prenota">PRENOTA ORA</button>
+            </div>
+
+            <div class="carousel-item">
+                <h5>POVERI, MA BELLI</h5>
+                <img src="/assets/img/poveri ma belli.jpg" class="d-block w-100" alt="...">
+                <button class="btn-prenota">PRENOTA ORA</button>
+            </div>
+
+            <div class="carousel-item">
+                <h5>IL SOGNO DEL PICCOLO IMPERATORE</h5>
+                <img src="/assets/img/il sogno del piccolo imperatore.jpg" class="d-block w-100" alt="...">
+                <button class="btn-prenota">PRENOTA ORA</button>
+            </div>
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- FINE CAROUSEL -->
+
+    <form id="form" class="row g-3">
+        <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">Email</label>
+            <input type="email" class="form-control" id="inputEmail4">
+        </div>
+        <label for="spettacolo">Seleziona lo spettacolo</label>
+        <select name="spettacolo" class="form-select" aria-label="Default select example">
+
+            <option></option>
+            <option value="Appunti per un film sulla lotta di classe">Appunti per un film sulla lotta di classe</option>
+            <option value="Birraio di preston">Birraio di preston</option>
+            <option value="La traviata">La traviata</option>
+            <option value="La boheme">La boheme</option>
+            <option value="Poveri ma belli">Poveri ma belli</option>
+            <option n value="Il sogno del piccolo imperatore">Il sogno del piccolo imperatore</option>
+        </select>
+
+        <label for="teatro">Seleziona il Teatro</label>
+        <select name="teatro" class="form-select" aria-label="Default select example">
+            <option></option>
+            <option value="Teatro
+            Carignano">Teatro
+                Carignano</option>
+            <option value="Teatro
+            Regio">Teatro
+                Regio</option>
+            <option value="Teatro
+            Alfieri">Teatro
+                Alfieri</option>
+        </select>
+
+        <label for="pagamento">Metodo di pagamento</label>
+        <select name="pagamento" class="form-select" aria-label="Default select example">
+            <option></option>
+            <option value="In sede">In sede</option>
+            <option value="Carta di credito">Carta di credito</option>
+        </select>
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary">Prenota</button>
+            <button type="button" id="close-btn" class="btn">Chiudi Form</button>
+        </div>
+    </form>
+
+
+    <script src="./js/script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+
+
+</body>
+
+</html>
