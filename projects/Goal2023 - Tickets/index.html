@@ -14,6 +14,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- LINK GOOGLE FONTS ROBOTO -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
 
     <!-- LINK BOOTSTRAP CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -33,11 +38,15 @@
             <p>Tickets</p>
         </div>
         <div class="navItems">
-            <img src="assets/icons/car.svg" alt="#">
-            <img src="assets/icons/user.svg" alt="#">
-        </div>
-        <div class="menu"><img src="assets/icons/dots.svg" alt="#">
-            <p>Menu</p>
+            <button class="btn-container">Accedi</button>
+            <div class="navIcons">
+                <img src="assets/icons/car.svg" alt="#">
+                <img src="assets/icons/user.svg" alt="#">
+            </div>
+            <div class="menu">
+                <img src="assets/icons/dots.svg" alt="#">
+                <p>Menu</p>
+            </div>
         </div>
     </nav>
     <!-- FINE NAV-BAR -->
@@ -141,6 +150,15 @@
             <option value="Teatro
             Alfieri">Teatro
                 Alfieri</option>
+        </select>
+
+        
+        <label for="data">Seleziona la data</label>
+            <input name="data" type="date">
+        </select>
+
+        <label for="biglietti">Quantità biglietti da acquistare:</label>
+            <input name="biglietti" type="number" max="10">
         </select>
 
         <label for="pagamento">Metodo di pagamento</label>
