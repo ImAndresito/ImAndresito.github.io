@@ -137,6 +137,12 @@ nav button {
 .carousel-control-prev {
     height: fit-content;
     margin: auto;
+    z-index: 10 !important;
+    border: 2px solid red;
+}
+
+.carousel-indicators{
+    z-index: 10 !important;
 }
 
 .carousel-item h5,
