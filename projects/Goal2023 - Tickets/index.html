@@ -28,7 +28,15 @@
 <body>
 
     <!-- DIV CON SFONDO NERO TRASPARENTE -->
-    <div class="black-overlay"></div>
+    <div class="black-overlay" id="overlay"></div>
+
+    <div class="intro-txt">
+        <h2 class="slide-out-top">PROGETTO GOAL</h2>
+    </div>
+    <div class="intro slide-out-top">
+        <img src="assets/img/intro.jpg" alt="#" class="intro-img">
+    </div>
+
 
     <!-- CREZIONE NAV-BAR -->
     <nav class="navBar">
@@ -38,7 +46,7 @@
             <p>Tickets</p>
         </div>
         <div class="navItems">
-            <button class="btn-container">Accedi</button>
+            <button id="loginBtn">Accedi</button>
             <div class="navIcons">
                 <img src="assets/icons/car.svg" alt="#">
                 <img src="assets/icons/user.svg" alt="#">
@@ -50,6 +58,21 @@
         </div>
     </nav>
     <!-- FINE NAV-BAR -->
+
+    <form class="login-form" id="loginForm">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Indirizzo email</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Inserisci la tua email">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Accedi</button>
+    </form>
 
     <!-- CAROUSEL DI IMMAGINI USANDO BOOTSTRAP -->
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -121,7 +144,7 @@
     </div>
     <!-- FINE CAROUSEL -->
 
-    <form id="form" class="row g-3">
+    <form id="form" class="row g-3 ">
         <div class="col-md-6">
             <label for="inputEmail4" class="form-label">Email</label>
             <input type="email" class="form-control" id="inputEmail4">
@@ -152,13 +175,13 @@
                 Alfieri</option>
         </select>
 
-        
+
         <label for="data">Seleziona la data</label>
-            <input name="data" type="date">
+        <input name="data" type="date">
         </select>
 
         <label for="biglietti">Quantità biglietti da acquistare:</label>
-            <input name="biglietti" type="number" max="10">
+        <input name="biglietti" type="number" max="10">
         </select>
 
         <label for="pagamento">Metodo di pagamento</label>
