@@ -4,158 +4,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <title>Av-Portfolio</title>
+    <title>Goal2023 - Tickets</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css">
+
+
+    <!-- LINK GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- LINK GOOGLE FONTS ROBOTO -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet">
+
+    <!-- LINK BOOTSTRAP CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
 <body>
 
-    <header>
-        <nav class="navBar">
-            <div class="logo">
-                <h1>A</h1>
-                <div class="logoTxt">
-                    <p>ndres</p>
-                    <p>Web Developer</p>
-                </div>
-            </div>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Chi sono</a></li>
-                <li><a href="#">Skills</a></li>
-                <li><a href="#">Progetti</a></li>
-                <li><a href="#">Contatti</a></li>
-            </ul>
-            <div class="darkMode">
-                <img id="darkMode" src="/assets/icons/dark.svg" alt="dark mode">
-            </div>
-            <div class="lightMode">
-                <img id="lightMode" src="/assets/icons/light.svg" alt="light mode">
-            </div>
-        </nav>
-        <main>
-            <div class="title">
-                <h2 class="txt txt1">
-                    Hi, I'm <br>
-                    <span class="txt txt2" id="txt2">Edson Andres Villa Sanchez</span>
-                    <br>
-                </h2>
-                <h2 class="txt3">a Junior Developer</h2>
-            </div>
-            <div class="mainImgContainer">
-                <div class="mainIcons">
-                    <a href="https://github.com/ImAndresito" target="_blank"><object class="svgGit svgIcons"
-                            type="image/svg+xml" data="assets/icons/Git.svg"></object></a>
-                    <a href="#"><object class="svgIcons" type="image/svg+xml" data="assets/icons/In.svg"></object></a>
-                    <a href="mailto:andresito.villa.01@gmail.com"><object class="svgMail svgIcons" type="image/svg+xml"
-                            data="assets/icons/Mail.svg"></object></a>
-                    <a href="https://wa.me/393458593504"><object class="svgIcons" type="image/svg+xml"
-                            data="assets/icons/Whatsapp.svg"></object></a>
-                </div>
-                <img class="hImg" src="assets/img/header.svg" alt="#">
-                <div class="hBtn">
-                    <div class="cvContainer">
-                        <a href="assets/CV - Villa Sanchez.pdf" download>
-                            <button>Download CV
-                                <img src="assets/icons/download.svg" alt="#">
-                            </button>
-                        </a>
-                    </div>
-                    <a href="tel:+393458593504" class="contactBtn"><button>Contact</button></a>
-                </div>
-            </div>
-        </main>
-    </header>
-    <article class="personalInfo">
-        <section class="projects">
-            <h3>Projects</h3>
-            <p>*For now these WebSites are only for Mobile <i>(Mobile first)</i>. <br><span>Will make them responsive
-                    soon.</span>
-            </p>
-            <div class="projectsContainer">
-                <div>
-                    <a href="projects/Mirys Nails/index.html" target="_blank"><img src="assets/projects/Mirys Nails.png"
-                            alt="Mirys Nails">
-                        <p class="pTitle" id="mirysNails">Mirys Nails</p>
-                    </a>
+    <!-- DIV CON SFONDO NERO TRASPARENTE -->
+    <div class="black-overlay" id="overlay"></div>
 
-                </div>
-                <div>
-                    <a href="projects/Neih/index.html" target="_blank"><img src="assets/projects/Neih.png" alt="Neih">
-                        <p id="neih" class="pTitle">Neih</p>
-                    </a>
-                </div>
-                <div id="javaImg">
-                    <a href="projects/Java/index.html" target="_blank"><img src="assets/projects/Java.png" alt="Java">
-                        <p id="java" class="pTitle">Java</p>
-                    </a>
-                </div>
-            </div>
-        </section>
-        <hr>
-        <section class="skills">
-            <h3>Skills</h3>
-            <h4>
-                <i class="white">Developer</i>
-            </h4>
-            <div class="skillsCodingContainer">
-                <div>
-                    <img src="assets/icons/skills/html.png" alt="html">
-                    <p>HTML</p>
-                </div>
-                <div>
-                    <img src="assets/icons/skills/css.png" alt="css">
-                    <p>CSS</p>
-                </div>
-                <div>
-                    <img src="assets/icons/skills/javascript.png" alt="javascript">
-                    <p>Js</p>
-                </div>
-                <div>
-                    <img src="assets/icons/skills/java.png" alt="java">
-                    <p>Java</p>
-                </div>
-                <div>
-                    <img id="sqlImg" src="assets/icons/skills/sql.png" alt="sql">
-                    <img id="sqlWImg" src="assets/icons/skills/sqlW.png" alt="sql">
-                    <p>SQL</p>
-                </div>
-            </div>
-            <h4>
-                <i class="white">Designer</i>
-            </h4>
-            <div class="designerContainer">
-                <div>
-                    <img src="assets/icons/skills/design/photoshop.png" alt="photoshop">
-                    <p id="ps"><span id="photoshop">Photoshop</span></p>
-                </div>
-                <div>
-                    <img src="assets/icons/skills/design/illustrator.png" alt="illustrator">
-                    <p id="ai"><span id="illustrator">Illustrator</span></p>
-                </div>
-                <div>
-                    <img src="assets/icons/skills/design/premiere.png" alt="premiere">
-                    <p id="pr"><span id="premiere">Premiere</span></p>
-                </div>
-                <div>
-                    <img src="assets/icons/skills/design/figma.png" alt="figma">
-                    <p>Figma</p>
-                </div>
-            </div>
-        </section>
-    </article>
+    <div class="intro-txt">
+        <h2 class="slide-out-top">PROGETTO GOAL</h2>
+    </div>
+    <div class="intro slide-out-top">
+        <img src="assets/img/intro.jpg" alt="#" class="intro-img">
+    </div>
 
-    <h6>WORK IN PROGRESS....</h6>
 
-    <a href="/projects/Goal2023 - Tickets/index.html"><button>PROGETTO GOAL 2023</button></a>
+    <!-- CREZIONE NAV-BAR -->
+    <nav class="navBar">
+        <div class="logo">
+            <h1><span style="color: var(--green)">Go</span><span style="color: var(--orange)">al</span><span
+                    style="color: var(--deep-blue)">20</span><span style="color: var(--red)">23</span></h1>
+            <p>Tickets</p>
+        </div>
+        <div class="navItems">
+            <button id="loginBtn">Accedi</button>
+            <div class="navIcons">
+                <img src="assets/icons/car.svg" alt="#">
+                <img src="assets/icons/user.svg" alt="#">
+            </div>
+            <div class="menu">
+                <img src="assets/icons/dots.svg" alt="#">
+                <p>Menu</p>
+            </div>
+        </div>
+    </nav>
+    <!-- FINE NAV-BAR -->
+
+    <form class="login-form" id="loginForm">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Indirizzo email</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Inserisci la tua email">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Accedi</button>
+    </form>
+
+    <!-- CAROUSEL DI IMMAGINI USANDO BOOTSTRAP -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+                aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5"
+                aria-label="Slide 6"></button>
+        </div>
+
+
+
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <h5>APPUNTI PER UN FILM SULLA LOTTA IN CLASSE</h5>
+                <img src="assets/img/appunti per un film sulla lotta di classe.jpg" class="d-block w-100" alt="...">
+                <button class="btn-prenota">PRENOTA ORA</button>
+            </div>
+
+            <div class="carousel-item">
+                <h5>IL BIRRAIO DI PRESTON</h5>
+                <img src="assets/img/il birraio di preston.jpg" class="d-block w-100" alt="...">
+                <button class="btn-prenota">PRENOTA ORA</button>
+            </div>
+
+            <div class="carousel-item">
+                <h5>LA TRIVIATA</h5>
+                <img src="assets/img/la traviata.jpg" class=" d-block w-100" alt="...">
+                <button class="btn-prenota">PRENOTA ORA</button>
+            </div>
+
+            <div class="carousel-item">
+                <h5>LA BOHEME</h5>
+                <img src="assets/img/la boheme.jpg" class="d-block w-100" alt="...">
+                <button class="btn-prenota">PRENOTA ORA</button>
+            </div>
+
+            <div class="carousel-item">
+                <h5>POVERI, MA BELLI</h5>
+                <img src="assets/img/poveri ma belli.jpg" class="d-block w-100" alt="...">
+                <button class="btn-prenota">PRENOTA ORA</button>
+            </div>
+
+            <div class="carousel-item">
+                <h5>IL SOGNO DEL PICCOLO IMPERATORE</h5>
+                <img src="assets/img/il sogno del piccolo imperatore.jpg" class="d-block w-100" alt="...">
+                <button class="btn-prenota">PRENOTA ORA</button>
+            </div>
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- FINE CAROUSEL -->
+
+    <form id="form" class="row g-3 ">
+        <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">Email</label>
+            <input type="email" class="form-control" id="inputEmail4">
+        </div>
+        <label for="spettacolo">Seleziona lo spettacolo</label>
+        <select name="spettacolo" class="form-select" aria-label="Default select example">
+
+            <option></option>
+            <option value="Appunti per un film sulla lotta di classe">Appunti per un film sulla lotta di classe</option>
+            <option value="Birraio di preston">Birraio di preston</option>
+            <option value="La traviata">La traviata</option>
+            <option value="La boheme">La boheme</option>
+            <option value="Poveri ma belli">Poveri ma belli</option>
+            <option n value="Il sogno del piccolo imperatore">Il sogno del piccolo imperatore</option>
+        </select>
+
+        <label for="teatro">Seleziona il Teatro</label>
+        <select name="teatro" class="form-select" aria-label="Default select example">
+            <option></option>
+            <option value="Teatro
+            Carignano">Teatro
+                Carignano</option>
+            <option value="Teatro
+            Regio">Teatro
+                Regio</option>
+            <option value="Teatro
+            Alfieri">Teatro
+                Alfieri</option>
+        </select>
+
+
+        <label for="data">Seleziona la data</label>
+        <input name="data" type="date">
+        </select>
+
+        <label for="biglietti">Quantità biglietti da acquistare:</label>
+        <input name="biglietti" type="number" max="10">
+        </select>
+
+        <label for="pagamento">Metodo di pagamento</label>
+        <select name="pagamento" class="form-select" aria-label="Default select example">
+            <option></option>
+            <option value="In sede">In sede</option>
+            <option value="Carta di credito">Carta di credito</option>
+        </select>
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary">Prenota</button>
+            <button type="button" id="close-btn" class="btn">Chiudi Form</button>
+        </div>
+    </form>
+
 
     <script src="./js/script.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+
+
 </body>
 
 </html>
