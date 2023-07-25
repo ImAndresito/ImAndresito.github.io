@@ -43,6 +43,7 @@ body {
     height: 100vh;
     width: 100%;
     object-fit: cover;
+    display: none;
 }
 
 .intro-txt {
@@ -55,6 +56,7 @@ body {
     display: flex;
     font-size: 3rem;
     text-align: center;
+    display: none;
 }
 
 nav {
@@ -141,7 +143,7 @@ nav button {
     border: 2px solid red;
 }
 
-.carousel-indicators{
+.carousel-indicators {
     z-index: 10 !important;
 }
 
@@ -194,18 +196,6 @@ button {
     color: #fff;
 }
 
-@media screen and (max-width: 768px) {
-    #form {
-        width: 83%;
-    }
-
-    .carousel h5 {
-        text-align: center;
-        font-size: 2.5rem !important;
-    }
-}
-
-
 #loginForm {
     position: absolute;
     z-index: 11;
@@ -246,5 +236,48 @@ button {
     100% {
         -webkit-transform: translateY(-1000px);
         transform: translateY(-1000px);
+    }
+}
+
+.galleria-spettacoli {
+    margin-top: 1rem !important;
+    width: 90%;
+    margin: auto auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: 1fr;
+    grid-gap: 1rem;
+}
+
+.galleria-spettacoli img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+    #form {
+        width: 83%;
+    }
+
+    .carousel h5 {
+        text-align: center;
+        font-size: 2.5rem !important;
+    }
+
+    .galleria-spettacoli {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .carousel h5 {
+        text-align: center;
+        font-size: 2.5rem !important;
+    }
+
+    .galleria-spettacoli {
+        grid-template-columns: repeat(2, 1fr);
+
     }
 }
