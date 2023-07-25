@@ -7,6 +7,7 @@ let loginForm = document.getElementById("loginForm")
 for (let i = 0; i < btn.length; i++) {
     btn[i].addEventListener("click", function () {
         form.style.display = "block";
+        loginForm.style.display = "none";
     });
 }
 
@@ -16,6 +17,7 @@ closeBtn.addEventListener("click", function () {
 
 loginBtn.addEventListener("click", function () {
     loginForm.style.display = "block";
+    form.style.display = "none";
 })
 
 
