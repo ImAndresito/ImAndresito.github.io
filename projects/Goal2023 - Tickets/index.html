@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Goal2023 - Tickets</title>
 
@@ -144,60 +145,63 @@
     </div>
     <!-- FINE CAROUSEL -->
 
-    <form id="form" class="row g-3 ">
-        <div class="col-md-6">
-            <label for="inputEmail4" class="form-label">Email</label>
-            <input type="email" class="form-control" id="inputEmail4">
-        </div>
-        <label for="spettacolo">Seleziona lo spettacolo</label>
-        <select name="spettacolo" class="form-select" aria-label="Default select example">
+    <form id="form" action="/api/biglietti/create" class="row g-3" method="POST">
+        <label for="codReplica" class="form-label">Codice Replica:</label>
+        <select id="codReplica" class="form-select" name="codReplica"></select>
 
-            <option></option>
-            <option value="Appunti per un film sulla lotta di classe">Appunti per un film sulla lotta di classe</option>
-            <option value="Birraio di preston">Birraio di preston</option>
-            <option value="La traviata">La traviata</option>
-            <option value="La boheme">La boheme</option>
-            <option value="Poveri ma belli">Poveri ma belli</option>
-            <option n value="Il sogno del piccolo imperatore">Il sogno del piccolo imperatore</option>
+        <p class="dataTxt">L'unica data disponibile è:<span id="data"></span></p>
+
+        <label for="data">Data:</label>
+        <input type="date" id="data" name="data" class="form-date">
+
+        <label for="codCliente">Codice Cliente:</label>
+        <input type="number" min="1" id="codCliente" name="codCliente" class="">
+
+        <label for="ora">Ora:</label>
+        <span id="ora">21:00</span>
+
+        <label for="tipoPagamento">Tipo di Pagamento:</label>
+        <select id="tipoPagamento" class="form-select" name="tipoPagamento">
+            <option value="Contanti">Contanti</option>
+            <option value="Carta di Credito">Carta di Credito</option>
+            <option value="Bonifico">Bonifico</option>
+            <option value="Bonifico">Paypal</option>
         </select>
 
-        <label for="teatro">Seleziona il Teatro</label>
-        <select name="teatro" class="form-select" aria-label="Default select example">
-            <option></option>
-            <option value="Teatro
-            Carignano">Teatro
-                Carignano</option>
-            <option value="Teatro
-            Regio">Teatro
-                Regio</option>
-            <option value="Teatro
-            Alfieri">Teatro
-                Alfieri</option>
-        </select>
+        <label for="quantita">Quantità:</label>
+        <input type="number" id="quantita" name="quantita" min="1">
 
-
-        <label for="data">Seleziona la data</label>
-        <input name="data" type="date">
-        </select>
-
-        <label for="biglietti">Quantità biglietti da acquistare:</label>
-        <input name="biglietti" type="number" max="10">
-        </select>
-
-        <label for="pagamento">Metodo di pagamento</label>
-        <select name="pagamento" class="form-select" aria-label="Default select example">
-            <option></option>
-            <option value="In sede">In sede</option>
-            <option value="Carta di credito">Carta di credito</option>
-        </select>
         <div class="col-12">
-            <button type="submit" class="btn btn-primary">Prenota</button>
+            <button type="submit" class="btn btn-primary" value="Crea Biglietto">Prenota</button>
             <button type="button" id="close-btn" class="btn">Chiudi Form</button>
         </div>
     </form>
 
+    <section class="galleria-spettacoli">
+        <figure class="galleria-item galleria-item-1">
+            <img src="assets/img/appunti per un film sulla lotta di classe.jpg" alt="#">
+        </figure>
+        <figure class="galleria-item galleria-item-2">
+            <img src="assets/img/il birraio di preston.jpg" alt="#">
+        </figure>
+        <figure class="galleria-item galleria-item-3">
+            <img src="assets/img/la traviata.jpg" alt="#">
+        </figure>
+        <figure class="galleria-item galleria-item-4">
+            <img src="assets/img/la boheme.jpg" alt="#">
+        </figure>
+        <figure class="galleria-item galleria-item-5">
+            <img src="assets/img/poveri ma belli.jpg" alt="#">
+        </figure>
+        <figure class="galleria-item galleria-item-6">
+            <img src="assets/img/il sogno del piccolo imperatore.jpg" alt="#">
+        </figure>
+    </section>
+
+
 
     <script src="./js/script.js"></script>
+    <script src="./js/creaBiglietto.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
