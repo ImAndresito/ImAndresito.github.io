@@ -4,6 +4,14 @@
     box-sizing: border-box;
 }
 
+/* CREZIONE VARIABILI CUSTOM */
+:root {
+    --red: #B61928;
+    --orange: #FF6716;
+    --deep-blue: #007DB1;
+    --green: #6FAA27;
+}
+
 img,
 video {
     max-width: 100%;
@@ -23,623 +31,308 @@ button {
     font-family: inherit;
 }
 
-object {
-    pointer-events: none;
-}
-
 body {
-    background-color: #F4EFEC;
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
-    padding-bottom: 2rem;
+    font-family: 'Crimson Text', 'Times New Roman', Times, serif !important;
+    padding-bottom: 4rem;
+    background: #F4EFEC;
 }
 
-.title {
-    font-size: 4.5vw;
+.intro,
+.intro-img {
+    position: absolute;
+    top: 0;
+    z-index: 11;
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    display: none;
 }
 
-.title,
-.navBar {
-    padding-left: 1rem;
+.intro-txt {
+    position: absolute;
+    z-index: 12;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    display: flex;
+    font-size: 3rem;
+    text-align: center;
+    display: none;
+}
+
+nav {
+    position: absolute;
+    z-index: 10;
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav button {
+    border: 2px solid #fff;
+    border-radius: 10px;
+    padding: .3rem .5rem;
+    background-color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    font-family: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .logo {
-    display: flex;
-    position: relative;
-    color: #F44336;
+    position: absolute;
+    left: 2rem;
+    top: .5rem;
 }
 
-.logo h1 {
-    font-size: 3.5rem;
-}
 
-.logoTxt {
+.navItems {
+    position: absolute;
     display: flex;
+    align-items: center;
     flex-direction: column;
-    justify-content: space-evenly;
-}
-
-.logoTxt p {
-    font-weight: 700;
-    font-size: 1.2rem;
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -50%);
-}
-
-.logoTxt p+p {
-    position: absolute;
-    font-weight: 300;
-    font-size: 1rem;
-    top: 80%;
-    transform: translate(0, -80%);
-}
-
-nav ul {
-    display: none;
-}
-
-.darkMode,
-.lightMode {
-    width: 9%;
-    position: absolute;
-    top: 1.2rem;
-    left: 90%;
-    transform: translate(-90%);
-    cursor: pointer;
-}
-
-#darkMode {
-    filter: drop-shadow(2px 2px 2px rgb(0 0 0 / 0.4));
-}
-
-#lightMode {
-    filter: drop-shadow(2px 2px 2px rgba(228, 228, 228, 0.4));
-    display: none;
-}
-
-
-main {
-    padding-top: 1.5rem;
-}
-
-.title {
-    text-align: left;
-    overflow: hidden;
-}
-
-.title .txt {
-    position: relative;
-}
-
-.txt2 {
-    background: -webkit-linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 1) 0%, rgba(244, 67, 54, 1) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.txt2:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: #F4EFEC;
-    border-left: 2px solid #F44336;
-    animation: animate 4s steps(12) infinite;
-}
-
-@keyframes animate {
-
-    40%,
-    60% {
-        left: calc(100% + 4px);
-    }
-
-    100% {
-        left: 0%;
-    }
-}
-
-.mainIcons {
-    display: flex;
-    width: fit-content;
-    margin: auto auto;
-    justify-content: center;
-    align-items: baseline;
-    padding-top: 1.5rem;
-}
-
-.mainIcons object {
-    padding: 0 .5rem;
-    width: 2.4rem;
-}
-
-.hImg {
-    width: 60%;
-    margin: auto;
-    margin-top: 1rem;
-}
-
-.hBtn {
-    margin: auto auto;
-    width: fit-content;
-    padding: 2.2rem 0 2rem;
-    display: flex;
-}
-
-.cvContainer img {
-    display: inline-block;
-    width: 17px;
-    margin-left: .3rem;
-}
-
-.hBtn a {
-    text-decoration: none;
-}
-
-.hBtn button {
-    color: #fff;
-    background-color: #F44336;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    border: none;
-    font-size: .9rem;
-    display: flex;
-    cursor: pointer;
-}
-
-.contactBtn {
-    text-decoration: none;
-}
-
-.contactBtn button {
-    margin: 0 1rem;
-    color: #000;
-    background-color: #c4cae1;
-}
-
-.projects {
-    text-align: center;
-    padding-bottom: 2rem;
-}
-
-.projects h3 {
-    font-size: 1.5rem;
-}
-
-.projects p {
-    text-align: left;
-    font-size: .75rem;
-    color: #ff1100;
-    width: 90%;
-    margin: auto;
-    padding-top: .5rem;
-}
-
-.projects span {
-    font-size: .6rem;
-    font-style: italic;
-}
-
-.projectsContainer {
-    display: grid;
-    width: 90%;
-    margin: auto;
-    padding-top: 1rem;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%/1, max(4rem, 100%/2)), 1fr));
-}
-
-#javaImg {
-    padding-top: 1.5rem;
-}
-
-.projectsContainer div {
-    position: relative;
+    left: 95%;
+    transform: translate(-95%);
+    top: 1rem;
     padding: 0 1rem;
 }
 
-.projectsContainer .pTitle {
-    font-size: 1rem;
-    color: #000;
-    text-align: center;
-    font-weight: 500;
-}
-
-.projectsContainer a {
-    text-decoration: none;
-}
-
-.skills {
-    text-align: center;
-    padding-top: 1.5rem;
-}
-
-.skills h3 {
-    font-size: 1.5rem;
-}
-
-.skills h4 {
-    color: #000000;
-    padding-top: 1rem;
-}
-
-.skillsCodingContainer {
+.navItems .navIcons {
     display: flex;
-    padding-bottom: 1.5rem;
-    justify-content: space-around;
+    padding: .5rem;
 }
 
-.skillsCodingContainer div {
-    width: 75%;
-    padding: 1rem .6rem 0;
+.navItems img {
+    z-index: 10;
+    padding: 0 .5rem;
 }
 
-.skillsCodingContainer div p {
-    font-size: .8rem;
-    padding-top: .4rem;
+.carousel img {
+    height: 100vh;
+    object-fit: cover;
+    color: #272727;
 }
 
-#sqlWImg {
+.black-overlay {
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 9;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    height: fit-content;
+    margin: auto;
+    z-index: 10 !important;
+    border: 2px solid red;
+}
+
+#spettacoliH3 {
+    padding: 2rem 0 0 2rem;
+}
+
+.carousel-indicators {
+    z-index: 10 !important;
+}
+
+.carousel-item h5,
+button {
+    z-index: 10;
+}
+
+.carousel h5 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3rem !important;
+    text-shadow: 0px 0px 5px #fff;
+}
+
+.carousel-item button {
+    position: absolute;
+    top: 93%;
+    left: 50%;
+    transform: translate(-50%, -93%);
+    border: 2px solid #fff;
+    border-radius: 30px;
+    padding: .6rem 1.5rem;
+    background-color: #00000073;
+    color: #fff;
+    font-size: 1.1rem;
+    font-family: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#form {
+    width: 30%;
+    margin: auto auto;
+    position: absolute !important;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    background: #fff;
+    padding: 2rem 1rem;
+    border-radius: 30px;
     display: none;
 }
 
-.designerContainer div {
-    width: 75%;
-    padding: 1rem .6rem 0;
-}
-
-.designerContainer {
-    display: flex;
-    justify-content: space-around;
-}
-
-
-.designerContainer div p {
-    font-size: .8rem;
-    padding-top: .4rem;
-}
-
-h6 {
-    margin-top: 2rem;
-    font-size: 1.5rem;
-    text-align: center;
-    background-color: #000;
+#close-btn {
+    background-color: var(--red);
+    border: none;
     color: #fff;
 }
 
+#loginForm {
+    position: absolute;
+    z-index: 11;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 2rem;
+    display: none;
+}
 
+/* ANIMAZIONI */
 
-/* -----------------------  GALAXY FOLD 280px -----------------------  */
+.slide-out-top {
+    animation: slide-out-top 3.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) 0.5s both;
+}
 
-@media (max-width: 280px) {
+/* ----------------------------------------------
+ * Generated by Animista on 2023-7-24 16:56:5
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
 
-    .darkMode,
-    .lightMode {
-        top: 1.7rem;
+/**
+ * ----------------------------------------
+ * animation slide-out-top
+ * ----------------------------------------
+ */
+
+@keyframes slide-out-top {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
     }
 
-    #photoshop {
-        display: none;
-    }
-
-    #ps::after {
-        content: "Ps";
-    }
-
-    #illustrator {
-        display: none;
-    }
-
-    #ai::after {
-        content: "Ai";
-    }
-
-    #premiere {
-        display: none;
-    }
-
-    #pr::after {
-        content: "Pr";
+    100% {
+        -webkit-transform: translateY(-1000px);
+        transform: translateY(-1000px);
     }
 }
 
-
-
-/* ----------------------- ICONS 400px -----------------------  */
-
-@media (min-width: 400px) {
-
-    .darkMode,
-    .lightMode {
-        width: 6%;
-        top: 1.5rem;
-    }
-
-    .mainIcons object {
-        padding: 0 .5rem;
-        width: 2.7rem;
-    }
-
-    .skillsCodingContainer div {
-        width: 15%;
-    }
-
-    .designerContainer div {
-        width: 15%;
-    }
+.galleria-spettacoli {
+    margin-top: 1rem !important;
+    width: 90%;
+    margin: auto auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: 1fr;
+    grid-gap: 1rem;
 }
 
-/* ----------------------- SMALL DEVICES 576px -----------------------  */
-
-@media (min-width: 576px) {
-
-    .darkMode,
-    .lightMode {
-        width: 5%;
-        top: 1.7rem;
-        left: 92%;
-        transform: translate(-92%);
-    }
-
-    .logo h1 {
-        font-size: 4rem;
-    }
-
-    .mainIcons object {
-        padding: 0 .5rem;
-        margin: 0 .3rem;
-        width: 3rem;
-    }
-
-    .hImg {
-        width: 65%;
-    }
-
-    .hBtn button {
-        font-size: 1.1rem;
-    }
-
-    .projects h3 {
-        font-size: 1.85rem;
-    }
-
-    .logo h1 {
-        font-size: 3.5rem;
-    }
-
-    .logoTxt {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
-
-    .logoTxt p {
-        font-weight: 700;
-        font-size: 1.2rem;
-        position: absolute;
-        top: 50%;
-        transform: translate(0, -50%);
-    }
-
-    .logoTxt p+p {
-        position: absolute;
-        font-weight: 300;
-        font-size: 1rem;
-        top: 80%;
-        transform: translate(0, -80%);
-    }
-
-    #javaImg {
-        padding-top: 3rem;
-    }
-
-    .projects p {
-        font-size: 1rem;
-    }
-
-    .projects span {
-        font-size: .9rem;
-    }
-
-    .skills h3 {
-        font-size: 1.85rem;
-    }
-
-    .skillsCodingContainer div p {
-        font-size: 1rem;
-    }
-
-
-    .skillsCodingContainer div {
-        width: 13%;
-    }
-
-    .designerContainer div {
-        width: 13%;
-    }
+.galleria-spettacoli img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-/* ----------------------- TABLET DEVICES 768px -----------------------  */
 
-@media (min-width: 768px) {
-
-    .darkMode,
-    .lightMode {
-        padding-top: .6rem;
-        width: 4%;
-    }
-
-    .mainIcons object {
-        padding: 0 .5rem;
-        margin: 0 .3rem;
-        width: 3rem;
-    }
-
-    .projectsContainer img {
-        display: inline-block;
-    }
+.teatri {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
-/* ----------------------- SMALL DESKTOPS DEVICES 992px -----------------------  */
+.teatro-location {
+    margin: 3.5rem 0 1rem 0;
+}
 
+#location-1,
+#location-2,
+#location-3 {
+    cursor: pointer;
+}
 
-@media (min-width: 992px) {
+#location-1 {
+    margin-top: 1.5rem;
+}
 
-    .darkMode,
-    .lightMode {
-        width: 3.5%;
-        left: 95%;
-        transform: translate(-95%);
-        padding-top: 0;
+.teatro-location img {
+    width: 30px;
+}
+
+.teatro-location {
+    display: flex;
+}
+
+.img-location-container {
+    width: 50%;
+}
+
+.img-location-container img {
+    border-radius: 30px;
+    margin: auto auto;
+}
+
+#img-2 {
+    display: none;
+    width: 647px;
+    height: 407px;
+}
+
+#img-3 {
+    display: none;
+    width: 647px;
+    height: 407px;
+}
+
+@media screen and (max-width: 768px) {
+    #form {
+        width: 83%;
     }
 
-    main {
-        display: flex;
-        margin-bottom: 4.5rem;
-        position: relative;
-    }
-
-
-    .title {
-        font-size: 3vw;
-    }
-
-    .mainImgContainer {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        left: 95%;
-        transform: translate(-95%);
-        justify-content: space-around;
-        width: max-content;
-        height: 100%;
-    }
-
-    .mainIcons {
-        margin: 0 auto;
-    }
-
-    .hBtn {
-        margin: 0 auto;
-    }
-
-
-    .hImg {
-        display: none;
-    }
-
-
-    .projectsContainer {
-        margin-top: 2rem;
-        justify-content: center;
-    }
-
-    .projects h3 {
-        font-size: 2.5rem;
-        padding-bottom: 1.5rem;
-    }
-
-    .projects p {
-        font-size: 1.2rem;
+    .carousel h5 {
         text-align: center;
+        font-size: 2.5rem !important;
     }
 
-    .projects span {
-        font-size: 1rem;
-    }
-
-    .skills h3 {
-        font-size: 2.5rem;
-    }
-
-    .skills h4 {
-        font-size: 1.1rem;
-    }
-
-    .skillsCodingContainer div p {
-        font-size: 1.1rem;
-    }
-
-    .designerContainer div p {
-        font-size: 1.1rem;
-    }
-
-    .skillsCodingContainer div {
-        width: 10%;
-    }
-
-    .designerContainer div {
-        width: 10%;
+    .galleria-spettacoli {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
-/* ----------------------- DESKTOPS DEVICES 1200px -----------------------  */
-
-@media (min-width: 1200px) {
-
-    .darkMode,
-    .lightMode {
-        padding-top: .4rem;
-        width: 3%;
+@media screen and (max-width: 500px) {
+    .carousel h5 {
+        text-align: center;
+        font-size: 2.5rem !important;
     }
 
-    .logo h1 {
-        font-size: 5rem;
+    .galleria-spettacoli {
+        grid-template-columns: repeat(2, 1fr);
+
     }
 
-    .logoTxt {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
+    .location-img {
+        display: none;
     }
 
-    .logoTxt p {
-        font-weight: 700;
-        font-size: 1.8rem;
-        position: absolute;
-        top: 50%;
-        transform: translate(0, -50%);
-    }
-
-    .logoTxt p+p {
-        position: absolute;
-        font-weight: 300;
-        font-size: 1.5rem;
-        top: 80%;
-        transform: translate(0, -80%);
-    }
-
-    .skillsCodingContainer div {
-        width: 8%;
-    }
-
-    .designerContainer div {
-        width: 8%;
-    }
-}
-
-/* ----------------------- LARGE DESKTOPS DEVICES 1400px -----------------------  */
-
-@media (min-width: 1400px) {
-
-    .darkMode,
-    .lightMode {
-        padding-top: .1rem;
-        width: 2.5%;
-    }
-
-
-    .mainImgContainer {
-        left: 90%;
-        transform: translate(-90%);
-    }
-
-    .skillsCodingContainer div {
-        width: 7%;
-    }
-
-    .designerContainer div {
-        width: 7%;
+    .location-container {
+        width: 100%;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 0);
     }
 }
