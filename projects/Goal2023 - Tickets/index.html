@@ -49,12 +49,7 @@
         <div class="navItems">
             <button id="loginBtn">Accedi</button>
             <div class="navIcons">
-                <img src="assets/icons/car.svg" alt="#">
                 <img src="assets/icons/user.svg" alt="#">
-            </div>
-            <div class="menu">
-                <img src="assets/icons/dots.svg" alt="#">
-                <p>Menu</p>
             </div>
         </div>
     </nav>
@@ -146,16 +141,22 @@
     <!-- FINE CAROUSEL -->
 
     <form id="form" action="/api/biglietti/create" class="row g-3" method="POST">
+
+        <p id="teatroNome"></p>
+        <p id="spettacoloNome"></p>
+
         <label for="codReplica" class="form-label">Codice Replica:</label>
         <select id="codReplica" class="form-select" name="codReplica"></select>
 
-        <p class="dataTxt">L'unica data disponibile è:<span id="data"></span></p>
+        <p class="dataTxt">L'unica data disponibile è: <span id="data"></span></p>
+
+        <p id="data"></p>
 
         <label for="data">Data:</label>
-        <input type="date" id="data" name="data" class="form-date">
+        <input type="date" id="inputData" name="data" class="form-control">
 
         <label for="codCliente">Codice Cliente:</label>
-        <input type="number" min="1" id="codCliente" name="codCliente" class="">
+        <input type="number" min="1" max="14" id="codCliente" name="codCliente" class="form-control">
 
         <label for="ora">Ora:</label>
         <span id="ora">21:00</span>
@@ -165,7 +166,7 @@
             <option value="Contanti">Contanti</option>
             <option value="Carta di Credito">Carta di Credito</option>
             <option value="Bonifico">Bonifico</option>
-            <option value="Bonifico">Paypal</option>
+            <option value="Paypal">Paypal</option>
         </select>
 
         <label for="quantita">Quantità:</label>
@@ -177,6 +178,7 @@
         </div>
     </form>
 
+    <h3 id="spettacoliH3">Spettacoli disponibili</h3> <br>
     <section class="galleria-spettacoli">
         <figure class="galleria-item galleria-item-1">
             <img src="assets/img/appunti per un film sulla lotta di classe.jpg" alt="#">
@@ -198,7 +200,41 @@
         </figure>
     </section>
 
+    <br>
+    <hr>
+    <br>
+    <br>
 
+    <section class="teatri">
+        <div class="location-container">
+            <div class="nostri-teatri">
+                <h3>I NOSTRI TEATRI:</h3>
+            </div>
+            <div id="location-1" class="teatro-location">
+                <img src="assets/icons/map-pin.svg" alt="#">
+                Teatro Carignano, Piazza Carignano 6, TO
+            </div>
+            <div id="location-2" class="teatro-location">
+                <img src="assets/icons/map-pin.svg" alt="#">
+                Teatro Regio, Piazza Castello 2, TO
+            </div>
+            <div id="location-3" class="teatro-location">
+                <img src="assets/icons/map-pin.svg" alt="#">
+                Teatro Alfieri, Piazza Solferino 4, TO
+            </div>
+        </div>
+        <div class="img-location-container">
+            <div class="location-img">
+                <img id="img-1" src="assets/img/maps/carignano.png" alt="#">
+            </div>
+            <div class="location-img">
+                <img id="img-2" src="assets/img/maps/regio.png" alt="#">
+            </div>
+            <div class="location-img">
+                <img id="img-3" src="assets/img/maps/alfieri.png" alt="#">
+            </div>
+        </div>
+    </section>
 
     <script src="./js/script.js"></script>
     <script src="./js/creaBiglietto.js"></script>
